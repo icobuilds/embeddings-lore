@@ -1,0 +1,27 @@
+[project]
+name = "embeddings-lore"
+version = "0.1.0"
+description = "A self-hosted, server-deployable FastAPI application that loads multiple open-source embedding models, indexes a candidate database, and exposes similarity search with configurable metadata fields + benchmarks each model on speed, memory, and retrieval quality"
+authors = [
+    {name = "ico", email = "ico.builds@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.136.1,<0.137.0",
+    "uvicorn>=0.46.0,<0.47.0",
+    "pymysql>=1.1.3,<2.0.0",
+    "PyYAML>=6.0",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.1",
+    "sentence-transformers>=5.5.0",
+    "faiss-cpu>=1.13.2",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
