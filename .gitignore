@@ -1,0 +1,7 @@
+.env
+__pycache__/
+dist/*
+indexes/*
+config/config.yaml
+Dockerfile.local
+local_setup/*
